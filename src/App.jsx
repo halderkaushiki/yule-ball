@@ -967,7 +967,7 @@ function MainPage() {
 
   if (activeEvent) {
     return (
-      <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, #04000a 0%, #15001c 45%, #050010 100%)", zIndex: 1 }}>
+      <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
         <Particles count={25} />
         <Scanlines />
         <EventDetailPage eventId={activeEvent} onBack={() => setActiveEvent(null)} />
@@ -977,7 +977,7 @@ function MainPage() {
   }
 
   return (
-    <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, #04000a 0%, #15001c 45%, #050010 100%)", zIndex: 1 }}>
+    <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
       
       <Particles count={25} />
       <Scanlines />
