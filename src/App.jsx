@@ -109,7 +109,7 @@ function Particles() {
     let w = c.width = window.innerWidth, h = c.height = window.innerHeight;
     
     // Create dual-type glitch particles: Red Ticks & Twinkling Rose-Crimson Stars
-    const pts = Array.from({ length: 240 }, () => {
+    const pts = Array.from({ length: 80 }, () => {
       const isTick = Math.random() > 0.45;
       return {
         isTick,
@@ -706,7 +706,7 @@ function EventDetailPage({ eventId, onBack }) {
       width: "100%", 
       maxWidth: "800px", 
       margin: "0 auto", 
-      padding: "2.5rem 1.5rem 6rem", 
+      padding: "clamp(1.5rem, 5vw, 2.5rem) clamp(0.5rem, 3vw, 1.5rem) 4rem", 
       textAlign: "center" 
     }}>
       
@@ -741,7 +741,7 @@ function EventDetailPage({ eventId, onBack }) {
         background: "#faf6f0",
         border: "8px solid #fff",
         outline: "1px solid rgba(44,28,12,0.15)",
-        padding: "2rem 2rem 3rem",
+        padding: "clamp(1.2rem, 5vw, 2rem) clamp(1rem, 5vw, 2rem) clamp(1.8rem, 6vw, 3rem)",
         boxShadow: "0 25px 65px rgba(0,0,0,0.65)",
         borderRadius: "4px",
         position: "relative",
@@ -776,7 +776,7 @@ function EventDetailPage({ eventId, onBack }) {
         {/* Large Premium Photo */}
         <div style={{
           width: "100%",
-          height: "360px",
+          height: "clamp(180px, 35vw, 360px)",
           overflow: "hidden",
           borderRadius: "2px",
           boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -1039,7 +1039,7 @@ function MainPage() {
       </div>
 
       {/* ── 2. MAIN SCROLLABLE BODY CONTENT ── */}
-      <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto", padding: "2rem 1.5rem 6rem", textAlign: "center" }}>
+      <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto", padding: "2rem clamp(0.5rem, 3vw, 1.5rem) 6rem", textAlign: "center" }}>
         
         {/* Secret Wizarding Unit Header Tag */}
         <div style={{
@@ -1463,7 +1463,7 @@ function MainPage() {
             flexDirection: window.innerWidth < 850 ? "column" : "row",
             justifyContent: "center",
             alignItems: "center",
-            gap: "2.5rem",
+            gap: "clamp(1.5rem, 5vw, 2.5rem)",
             width: "100%"
           }}>
             
