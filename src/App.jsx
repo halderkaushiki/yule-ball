@@ -837,7 +837,7 @@ function EventDetailPage({ eventId, onBack }) {
           color: "#2c1c0c",
           margin: 0
         }}>
-          "{event.desc}"
+          {event.desc}
         </p>
 
         {/* Decorative Scroll Ending signature */}
