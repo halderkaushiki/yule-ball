@@ -677,22 +677,6 @@ const EVENTS_DATA = {
     venue: "The Great Hall",
     desc: "Plan your dream date together using the given fun prompts and challenges.",
     photo: "/event5.png"
-  },
-  6: {
-    title: "the Shoe game",
-    date: "03 June 2026",
-    time: "04:00 PM",
-    venue: "The Great Hall",
-    desc: "Play the classic Shoe Game and see how well you both know each other.",
-    photo: "/event6.png"
-  },
-  7: {
-    title: "Photo Booth",
-    date: "03 June 2026",
-    time: "08:00 PM",
-    venue: "The Great Hall",
-    desc: "Create cute Yule Ball themed photos together using AI prompts and creativity.",
-    photo: "/event7.png"
   }
 };
 
@@ -1242,7 +1226,7 @@ function MainPage() {
             gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
             gap: "2rem"
           }}>
-            {[1, 2, 3, 4, 5, 6, 7].map(n => {
+            {[1, 2, 3, 4, 5].map(n => {
               const event = EVENTS_DATA[n];
               return (
                 <div 
