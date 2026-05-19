@@ -1042,7 +1042,7 @@ function MainPage() {
         
         {/* Secret Wizarding Unit Header Tag */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "1.2rem" }}>
-          <img src="/logo.png" alt="Secret Wizarding Unit Logo" style={{ width: "80px", height: "auto", marginBottom: "1rem", borderRadius: "50%", border: "2px solid rgba(218,165,32,0.4)", boxShadow: "0 4px 15px rgba(0,0,0,0.5)" }} />
+          <img src="/logo.png" alt="Secret Wizarding Unit Logo" style={{ width: "80px", height: "80px", objectFit: "cover", marginBottom: "1rem", borderRadius: "50%", border: "2px solid rgba(218,165,32,0.4)", boxShadow: "0 4px 15px rgba(0,0,0,0.5)" }} />
           <div style={{
             fontFamily: "'Josefin Sans', sans-serif",
             fontSize: "0.58rem", letterSpacing: "0.55em",
