@@ -1041,13 +1041,16 @@ function MainPage() {
       <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto", padding: "2rem clamp(0.5rem, 3vw, 1.5rem) 6rem", textAlign: "center" }}>
         
         {/* Secret Wizarding Unit Header Tag */}
-        <div style={{
-          fontFamily: "'Josefin Sans', sans-serif",
-          fontSize: "0.58rem", letterSpacing: "0.55em",
-          color: "rgba(220,160,140,0.8)", textTransform: "uppercase",
-          marginBottom: "1.2rem", textShadow: "0 1px 8px rgba(0,0,0,0.85)"
-        }}>
-          Secret Wizarding Unit Presents
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "1.2rem" }}>
+          <img src="/logo.png" alt="Secret Wizarding Unit Logo" style={{ width: "80px", height: "auto", marginBottom: "1rem", borderRadius: "50%", border: "2px solid rgba(218,165,32,0.4)", boxShadow: "0 4px 15px rgba(0,0,0,0.5)" }} />
+          <div style={{
+            fontFamily: "'Josefin Sans', sans-serif",
+            fontSize: "0.58rem", letterSpacing: "0.55em",
+            color: "rgba(220,160,140,0.8)", textTransform: "uppercase",
+            textShadow: "0 1px 8px rgba(0,0,0,0.85)"
+          }}>
+            Secret Wizarding Unit Presents
+          </div>
         </div>
 
         {/* Elegant Title */}
@@ -1388,6 +1391,21 @@ function MainPage() {
 
       {/* Retro Brass Magic Gramophone Ambient sound synth widget */}
       
+      {/* Footer */}
+      <footer style={{
+        width: "100%", padding: "2rem 1rem", background: "rgba(5, 0, 16, 0.95)", borderTop: "1px solid rgba(218,165,32,0.2)",
+        display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", color: "#c0b096", fontFamily: "'Cinzel', serif",
+        fontSize: "0.9rem", letterSpacing: "0.1em", marginTop: "auto", position: "relative", zIndex: 10
+      }}>
+        <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
+          <a href="https://www.facebook.com/groups/secretwizardingunit/" target="_blank" rel="noopener noreferrer" style={{ color: "#c0b096", textDecoration: "none", transition: "color 0.3s" }} onMouseEnter={e => e.currentTarget.style.color = "#ffd700"} onMouseLeave={e => e.currentTarget.style.color = "#c0b096"}>Facebook</a>
+          <a href="mailto:secretwizardingunit@gmail.com" style={{ color: "#c0b096", textDecoration: "none", transition: "color 0.3s" }} onMouseEnter={e => e.currentTarget.style.color = "#ffd700"} onMouseLeave={e => e.currentTarget.style.color = "#c0b096"}>Email</a>
+          <a href="https://instagram.com/secret_wizarding_unit/" target="_blank" rel="noopener noreferrer" style={{ color: "#c0b096", textDecoration: "none", transition: "color 0.3s" }} onMouseEnter={e => e.currentTarget.style.color = "#ffd700"} onMouseLeave={e => e.currentTarget.style.color = "#c0b096"}>Instagram</a>
+        </div>
+        <div style={{ fontSize: "0.7rem", fontFamily: "'Josefin Sans', sans-serif", letterSpacing: "0.15em", color: "rgba(220,160,140,0.6)" }}>
+          © 2026 Secret Wizarding Unit
+        </div>
+      </footer>
     </div>
   );
 }
