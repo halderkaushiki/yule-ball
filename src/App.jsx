@@ -101,7 +101,7 @@ const GlobalStyles = () => (
 );
 
 /* ── HIGH FIDELITY CYBER-MAGIC RED GLITCH PARTICLES ── */
-function Particles() {
+function Particles({ count = 80 }) {
   const ref = useRef(null);
   useEffect(() => {
     const c = ref.current; if (!c) return;
@@ -109,7 +109,7 @@ function Particles() {
     let w = c.width = window.innerWidth, h = c.height = window.innerHeight;
     
     // Create dual-type glitch particles: Red Ticks & Twinkling Rose-Crimson Stars
-    const pts = Array.from({ length: 80 }, () => {
+    const pts = Array.from({ length: count }, () => {
       const isTick = Math.random() > 0.45;
       return {
         isTick,
@@ -255,7 +255,7 @@ function TypewriterPage({ onDone }) {
       boxSizing: "border-box"
     }}>
       {/* Magical red sprinkles drifting in the background */}
-      <Particles />
+      <Particles count={25} />
       
       <div style={{
         position: "relative",
@@ -985,7 +985,7 @@ function MainPage() {
   if (activeEvent) {
     return (
       <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, #04000a 0%, #15001c 45%, #050010 100%)", zIndex: 1 }}>
-        <Particles />
+        <Particles count={25} />
         <Scanlines />
         <EventDetailPage eventId={activeEvent} onBack={() => setActiveEvent(null)} />
         
@@ -996,7 +996,7 @@ function MainPage() {
   return (
     <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, #04000a 0%, #15001c 45%, #050010 100%)", zIndex: 1 }}>
       
-      <Particles />
+      <Particles count={25} />
       <Scanlines />
 
       {/* ── 1. HEADER PHOTO (100% CLEAN AND UNOBSTRUCTED) ── */}
@@ -1105,114 +1105,6 @@ function MainPage() {
             textShadow: "0 1px 8px rgba(0,0,0,0.9)"
           }}>1 – 7 June 2026</span>
           <div style={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(139,0,0,0.65), transparent)" }} />
-        </div>
-
-        {/* ── 3. GRAND INVITATION SCROLL COUNTDOWN TIMER ── */}
-        <div style={{
-          background: "#faf6f0",
-          border: "1px solid #c8b4a0",
-          outline: "4px double #d4af37",
-          outlineOffset: "-8px",
-          padding: "2.5rem 2rem",
-          maxWidth: "600px",
-          margin: "0 auto 3.5rem",
-          boxShadow: "0 22px 60px rgba(0,0,0,0.6)",
-          borderRadius: "4px",
-          position: "relative",
-          color: "#2c1c0c",
-          textAlign: "center",
-          transform: "rotate(-0.5deg)"
-        }}>
-          {/* Decorative corner stars */}
-          <div style={{ position: "absolute", top: "12px", left: "12px", color: "#daa520", fontSize: "0.8rem" }}>✦</div>
-          <div style={{ position: "absolute", top: "12px", right: "12px", color: "#daa520", fontSize: "0.8rem" }}>✦</div>
-          <div style={{ position: "absolute", bottom: "12px", left: "12px", color: "#daa520", fontSize: "0.8rem" }}>✦</div>
-          <div style={{ position: "absolute", bottom: "12px", right: "12px", color: "#daa520", fontSize: "0.8rem" }}>✦</div>
-
-          <span style={{ 
-            fontFamily: "'Josefin Sans', sans-serif", 
-            fontSize: "0.6rem", 
-            letterSpacing: "0.25em", 
-            color: "rgba(139,0,0,0.75)", 
-            textTransform: "uppercase",
-            fontWeight: "bold",
-            display: "block",
-            marginBottom: "0.4rem"
-          }}>
-            Hogwarts School of Witchcraft and Wizardry
-          </span>
-          
-          <h2 style={{ 
-            fontFamily: "'Cinzel', serif", 
-            fontSize: "1.8rem", 
-            color: "#8b0000", 
-            letterSpacing: "0.1em",
-            fontWeight: 600,
-            margin: "0 0 0.3rem"
-          }}>
-            THE YULE BALL
-          </h2>
-
-          <div style={{ 
-            fontFamily: "'Cormorant Garamond', serif", 
-            fontStyle: "italic", 
-            fontSize: "1.05rem", 
-            color: "#3a2c1d", 
-            marginBottom: "1.8rem"
-          }}>
-            May 2026 - June 2026
-          </div>
-
-          {/* Centered Golden Circular Counters */}
-          <div style={{ display: "flex", justifyContent: "center", gap: "1.2rem", margin: "1.5rem 0" }}>
-            {["Days", "Hours", "Mins", "Secs"].map((label, idx) => {
-              const val = idx === 0 ? cd.d : idx === 1 ? cd.h : idx === 2 ? cd.m : cd.s;
-              return (
-                <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <div style={{
-                    width: "68px",
-                    height: "68px",
-                    border: "2px solid #daa520",
-                    borderRadius: "50%",
-                    background: "rgba(139, 0, 0, 0.04)",
-                    boxShadow: "inset 0 0 10px rgba(218, 165, 32, 0.1)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "'Special Elite', monospace",
-                    fontSize: "1.5rem",
-                    color: "#8b0000",
-                    fontWeight: "bold"
-                  }}>
-                    {val}
-                  </div>
-                  <span style={{ 
-                    fontFamily: "'Josefin Sans', sans-serif", 
-                    fontSize: "0.52rem", 
-                    color: "#daa520", 
-                    fontWeight: "bold",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase", 
-                    marginTop: "6px" 
-                  }}>
-                    {label}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Wax Seal Overlay/Endorsement */}
-          <div style={{ 
-            fontFamily: "'Special Elite', monospace", 
-            fontSize: "0.62rem", 
-            color: "rgba(139, 0, 0, 0.8)", 
-            letterSpacing: "0.05em",
-            marginTop: "1.8rem",
-            textTransform: "lowercase"
-          }}>
-            * {cd.label}
-          </div>
         </div>
 
         {/* ── 4. WAX-SEALED ENVELOPE REGISTER BUTTON ── */}
