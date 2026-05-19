@@ -831,11 +831,10 @@ function EventDetailPage({ eventId, onBack }) {
 
         {/* Event Detailed Description */}
         <p style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontStyle: "italic",
-          fontSize: "1.15rem",
+          fontFamily: "'Special Elite', monospace",
+          fontSize: "clamp(0.85rem, 2.5vw, 1rem)",
           lineHeight: 1.6,
-          color: "#3a2c1d",
+          color: "#2c1c0c",
           margin: 0
         }}>
           "{event.desc}"
