@@ -115,8 +115,8 @@ function Particles({ count = 80 }) {
         isTick,
         x: Math.random() * w,
         y: Math.random() * h,
-        r: isTick ? Math.random() * 2.5 + 2 : Math.random() * 2.2 + 1.2,
-        w: isTick ? Math.random() * 5 + 2.5 : 0, // width for sprinkles
+        r: isTick ? Math.random() * 12 + 6 : Math.random() * 2.2 + 1.2,
+        w: isTick ? Math.random() * 2 + 1 : 0, // width for sprinkles
         vx: (Math.random() - 0.5) * 0.45,       // gentle drift
         vy: Math.random() * 0.75 + 0.35,        // slow falling
         a: Math.random() * 0.55 + 0.35,         // opacity
@@ -998,7 +998,7 @@ function MainPage() {
   if (activeEvent) {
     return (
       <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
-        <Particles count={150} />
+        <Particles count={60} />
         <Scanlines />
         <EventDetailPage eventId={activeEvent} onBack={() => setActiveEvent(null)} />
         
@@ -1009,7 +1009,7 @@ function MainPage() {
   return (
     <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
       
-      <Particles count={150} />
+      <Particles count={60} />
       <Scanlines />
 
       {/* ── 1. HEADER PHOTO (100% CLEAN AND UNOBSTRUCTED) ── */}
@@ -1119,7 +1119,7 @@ function MainPage() {
             color: "rgba(220,160,140,0.95)", fontSize: "0.68rem", letterSpacing: "0.32em",
             fontFamily: "'Josefin Sans', sans-serif", textTransform: "uppercase",
             textShadow: "0 1px 8px rgba(0,0,0,0.9)"
-          }}>22 May – 3 June 2026</span>
+          }}>21 May – 3 June 2026</span>
           <div style={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(139,0,0,0.65), transparent)" }} />
         </div>
 
@@ -1577,6 +1577,60 @@ function MainPage() {
                   fontSize: "1rem"
                 }}>
                   {date}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── 8.5. EVENT CHRONOLOGY ── */}
+        <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "3rem" }}>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+            <h3 style={{
+              fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
+              color: "#c0b096", textTransform: "uppercase", textAlign: "center"
+            }}>
+              Event Chronology
+            </h3>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+          </div>
+          
+          <div style={{ 
+            maxWidth: "600px", margin: "0 auto", textAlign: "left", 
+            borderLeft: "1px dashed rgba(218,165,32,0.4)", paddingLeft: "2rem",
+            display: "flex", flexDirection: "column", gap: "2rem"
+          }}>
+            {[
+              { date: "21 May - 28 May 2026", title: "Registration Period", time: "All Day" },
+              { date: "29 May 2026", title: "Cultural Performance (Artist 1)", time: "TBD" },
+              { date: "29 May 2026", title: "guess the duo", time: "07:00 PM Onwards" },
+              { date: "29 May 2026", title: "scribble.io Night", time: "08:00 PM" },
+              { date: "30 May 2026", title: "Cultural Performance (Artist 2)", time: "TBD" },
+              { date: "30 May 2026", title: ".pptx of Secrets", time: "02:00 PM Onwards" },
+              { date: "31 May 2026", title: "Cultural Performance (Artist 3)", time: "TBD" },
+              { date: "31 May 2026", title: "Music & Love", time: "02:00 PM Onwards" },
+              { date: "01 June 2026", title: "Cultural Performance (Artist 4)", time: "TBD" },
+              { date: "01 June 2026", title: "Trivia Night", time: "08:00 PM Onwards" },
+              { date: "01 June 2026", title: "2 truth & a lie", time: "11:30 PM" },
+              { date: "02 June 2026", title: "The Dare Night", time: "10:00 AM" },
+              { date: "02 June 2026", title: "let's fix a Date (Great Hall)", time: "04:00 PM" },
+              { date: "02 June 2026", title: "Cultural Performance (Artist 5)", time: "TBD" },
+              { date: "03 June 2026", title: "Cultural Performance (Artist 6)", time: "TBD" },
+              { date: "03 June 2026", title: "let's fix a Date", time: "08:00 PM" },
+            ].map((ev, i) => (
+              <div key={i} style={{ position: "relative" }}>
+                <div style={{
+                  position: "absolute", left: "-2.35rem", top: "0.4rem",
+                  width: "12px", height: "12px", borderRadius: "50%", background: "#8b0000",
+                  border: "2px solid #faf6f0",
+                  boxShadow: "0 0 10px rgba(139,0,0,0.8)"
+                }} />
+                <div style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: "0.75rem", color: "rgba(220,160,140,0.9)", letterSpacing: "0.1em" }}>
+                  {ev.date} <span style={{ opacity: 0.5, margin: "0 0.5rem" }}>|</span> {ev.time}
+                </div>
+                <div style={{ fontFamily: "'Cinzel', serif", fontSize: "1.1rem", color: "#faf6f0", fontWeight: "bold", marginTop: "0.4rem", letterSpacing: "0.05em" }}>
+                  {ev.title}
                 </div>
               </div>
             ))}
