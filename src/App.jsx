@@ -1253,7 +1253,7 @@ function MainPage() {
           <div style={{
             width: "100%",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
             gap: "2rem"
           }}>
             {[1, 2, 3, 4].map(n => {
@@ -1370,7 +1370,7 @@ function MainPage() {
           <div style={{
             width: "100%",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
             gap: "2rem"
           }}>
             {['a', 'b', 'c', 'd'].map(n => {
@@ -1524,8 +1524,8 @@ function MainPage() {
           <div style={{
             width: "100%",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "2rem"
+            gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+            gap: "1.5rem"
           }}>
             {[
               { n: 1, date: "29 May 2026" },
