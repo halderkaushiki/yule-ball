@@ -1597,10 +1597,20 @@ function MainPage() {
           </div>
           
           <div style={{ 
-            maxWidth: "600px", margin: "0 auto", textAlign: "left", 
-            borderLeft: "1px dashed rgba(218,165,32,0.4)", paddingLeft: "2rem",
-            display: "flex", flexDirection: "column", gap: "2rem"
+            position: "relative",
+            maxWidth: "800px", margin: "0 auto",
+            display: "flex", flexDirection: "column", gap: "2.5rem"
           }}>
+            {/* Center Line */}
+            <div style={{
+              position: "absolute",
+              top: 0, bottom: 0, left: "50%",
+              width: "1px",
+              borderLeft: "1px dashed rgba(218,165,32,0.5)",
+              transform: "translateX(-50%)",
+              zIndex: 1
+            }} />
+
             {[
               { date: "21 May - 28 May 2026", title: "Registration Period", time: "All Day" },
               { date: "29 May 2026", title: "Cultural Performance (Artist 1)", time: "TBD" },
@@ -1618,22 +1628,49 @@ function MainPage() {
               { date: "02 June 2026", title: "Cultural Performance (Artist 5)", time: "TBD" },
               { date: "03 June 2026", title: "Cultural Performance (Artist 6)", time: "TBD" },
               { date: "03 June 2026", title: "let's fix a Date", time: "08:00 PM" },
-            ].map((ev, i) => (
-              <div key={i} style={{ position: "relative" }}>
-                <div style={{
-                  position: "absolute", left: "-2.35rem", top: "0.4rem",
-                  width: "12px", height: "12px", borderRadius: "50%", background: "#8b0000",
-                  border: "2px solid #faf6f0",
-                  boxShadow: "0 0 10px rgba(139,0,0,0.8)"
-                }} />
-                <div style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: "0.75rem", color: "rgba(220,160,140,0.9)", letterSpacing: "0.1em" }}>
-                  {ev.date} <span style={{ opacity: 0.5, margin: "0 0.5rem" }}>|</span> {ev.time}
+            ].map((ev, i) => {
+              const isLeft = i % 2 === 0;
+              return (
+                <div key={i} style={{
+                  display: "flex",
+                  flexDirection: isLeft ? "row" : "row-reverse",
+                  width: "100%",
+                  position: "relative",
+                  zIndex: 2
+                }}>
+                  {/* Content Box */}
+                  <div style={{
+                    width: "50%",
+                    padding: isLeft ? "0 clamp(1rem, 4vw, 2.5rem) 0 0" : "0 0 0 clamp(1rem, 4vw, 2.5rem)",
+                    textAlign: isLeft ? "right" : "left",
+                    position: "relative",
+                    boxSizing: "border-box"
+                  }}>
+                    {/* The Dot */}
+                    <div style={{
+                      position: "absolute",
+                      top: "0.2rem",
+                      [isLeft ? "right" : "left"]: "-8px",
+                      width: "12px", height: "12px", borderRadius: "50%", background: "#8b0000",
+                      border: "2px solid #faf6f0",
+                      boxShadow: "0 0 10px rgba(139,0,0,0.8)",
+                      zIndex: 3
+                    }} />
+                    
+                    {/* Text */}
+                    <div style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: "clamp(0.65rem, 1.8vw, 0.75rem)", color: "rgba(220,160,140,0.9)", letterSpacing: "0.1em" }}>
+                      {ev.date} <span style={{ opacity: 0.5, margin: "0 0.3rem" }}>|</span> {ev.time}
+                    </div>
+                    <div style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)", color: "#faf6f0", fontWeight: "bold", marginTop: "0.4rem", letterSpacing: "0.05em", lineHeight: 1.2 }}>
+                      {ev.title}
+                    </div>
+                  </div>
+                  
+                  {/* Empty Spacer */}
+                  <div style={{ width: "50%" }} />
                 </div>
-                <div style={{ fontFamily: "'Cinzel', serif", fontSize: "1.1rem", color: "#faf6f0", fontWeight: "bold", marginTop: "0.4rem", letterSpacing: "0.05em" }}>
-                  {ev.title}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
