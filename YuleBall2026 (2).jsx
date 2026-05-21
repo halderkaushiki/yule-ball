@@ -642,7 +642,7 @@ const EVENTS_DATA = {
     title: ".pptx of Secrets",
     date: "30 May 2026",
     time: "02: 00 PM Onwards",
-    venue: "The Great Hall",
+    venue: "Secret Wizarding Unit",
     desc: "Make a fun PPT about your partner in at least 7 slides.",
     photo: "/event1.png"
   },
@@ -650,23 +650,23 @@ const EVENTS_DATA = {
     title: "Music & Love",
     date: "31 May 2026",
     time: "02:00 PM Onwards",
-    venue: "The Great Hall",
+    venue: "Secret Wizarding Unit",
     desc: "Make a Spotify/YT Music playlist for your partner with at least 10 songs.",
     photo: "/event2.png"
   },
   3: {
-    title: "scribble.io Night",
-    date: "31 May 2026",
-    time: "05:00 PM Onwards",
-    venue: "The Great Hall",
+    title: "Trivia Night",
+    date: "01 June 2026",
+    time: "08:00 PM Onwards",
+    venue: "Secret Wizarding Unit",
     desc: "Compete with other couples in a fun Scribble.io night and guess the drawings together.",
     photo: "/event3.png"
   },
   4: {
-    title: "the Dare Night",
-    date: "01 June 2026",
+    title: "let's fix a Date",
+    date: "03 June 2026",
     time: "08:00 PM",
-    venue: "The Great Hall",
+    venue: "Secret Wizarding Unit",
     desc: "Spin the dare wheel and complete fun dares together with your partner.",
     photo: "/event4.png"
   },
@@ -1102,7 +1102,7 @@ function MainPage() {
             color: "rgba(220,160,140,0.95)", fontSize: "0.68rem", letterSpacing: "0.32em",
             fontFamily: "'Josefin Sans', sans-serif", textTransform: "uppercase",
             textShadow: "0 1px 8px rgba(0,0,0,0.9)"
-          }}>1 – 7 June 2026</span>
+          }}>22 May – 3 June 2026</span>
           <div style={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(139,0,0,0.65), transparent)" }} />
         </div>
 

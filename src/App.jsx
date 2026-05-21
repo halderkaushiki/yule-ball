@@ -254,8 +254,6 @@ function TypewriterPage({ onDone }) {
       zIndex: 1000, opacity: fading ? 0 : 1, transition: "opacity 1.2s ease",
       boxSizing: "border-box"
     }}>
-      {/* Magical red sprinkles drifting in the background */}
-      <Particles count={25} />
       
       <div style={{
         position: "relative",
@@ -642,32 +640,32 @@ const EVENTS_DATA = {
     title: ".pptx of Secrets",
     date: "30 May 2026",
     time: "02: 00 PM Onwards",
-    venue: "The Great Hall",
-    desc: "Make a fun PPT about your partner in at least 7 slides.",
+    venue: "Secret Wizarding Unit",
+    desc: "",
     photo: "/event1.png"
   },
   2: {
     title: "Music & Love",
     date: "31 May 2026",
     time: "02:00 PM Onwards",
-    venue: "The Great Hall",
-    desc: "Make a Spotify/YT Music playlist for your partner with at least 10 songs.",
+    venue: "Secret Wizarding Unit",
+    desc: "",
     photo: "/event2.png"
   },
   3: {
-    title: "scribble.io Night",
-    date: "31 May 2026",
-    time: "05:00 PM Onwards",
-    venue: "The Great Hall",
-    desc: "Compete with other couples in a fun Scribble.io night and guess the drawings together.",
+    title: "Trivia Night",
+    date: "01 June 2026",
+    time: "08:00 PM Onwards",
+    venue: "Secret Wizarding Unit",
+    desc: "",
     photo: "/event3.png"
   },
   4: {
-    title: "the Dare Night",
-    date: "01 June 2026",
+    title: "let's fix a Date",
+    date: "03 June 2026",
     time: "08:00 PM",
-    venue: "The Great Hall",
-    desc: "Spin the dare wheel and complete fun dares together with your partner.",
+    venue: "Secret Wizarding Unit",
+    desc: "",
     photo: "/event4.png"
   },
   5: {
@@ -675,8 +673,40 @@ const EVENTS_DATA = {
     date: "02 June 2026",
     time: "04:00 PM",
     venue: "The Great Hall",
-    desc: "Plan your dream date together using the given fun prompts and challenges.",
+    desc: "",
     photo: "/event5.png"
+  },
+  'a': {
+    title: "guess the duo",
+    date: "29 May 2026",
+    time: "07:00 PM Onwards",
+    venue: "The Great Hall",
+    desc: "",
+    photo: "/eventa.png"
+  },
+  'b': {
+    title: "scribble.io Night",
+    date: "29 May 2026",
+    time: "08:00 PM",
+    venue: "The Great Hall",
+    desc: "",
+    photo: "/eventb.png"
+  },
+  'c': {
+    title: "2 truth & a lie",
+    date: "01 June 2026",
+    time: "11:30 PM",
+    venue: "The Great Hall",
+    desc: "",
+    photo: "/eventc.png"
+  },
+  'd': {
+    title: "The Dare Night",
+    date: "02 June 2026",
+    time: "10:00 AM",
+    venue: "The Great Hall",
+    desc: "",
+    photo: "/eventd.png"
   }
 };
 
@@ -968,7 +998,7 @@ function MainPage() {
   if (activeEvent) {
     return (
       <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
-        <Particles count={25} />
+        <Particles count={150} />
         <Scanlines />
         <EventDetailPage eventId={activeEvent} onBack={() => setActiveEvent(null)} />
         
@@ -979,7 +1009,7 @@ function MainPage() {
   return (
     <div style={{ position: "relative", width: "100%", minHeight: "100vh", background: "linear-gradient(to bottom, rgba(4,0,10,0.6) 0%, rgba(21,0,28,0.7) 45%, rgba(5,0,16,0.8) 100%), url(/background.jpeg) center/cover no-repeat fixed", zIndex: 1 }}>
       
-      <Particles count={25} />
+      <Particles count={150} />
       <Scanlines />
 
       {/* ── 1. HEADER PHOTO (100% CLEAN AND UNOBSTRUCTED) ── */}
@@ -1089,7 +1119,7 @@ function MainPage() {
             color: "rgba(220,160,140,0.95)", fontSize: "0.68rem", letterSpacing: "0.32em",
             fontFamily: "'Josefin Sans', sans-serif", textTransform: "uppercase",
             textShadow: "0 1px 8px rgba(0,0,0,0.9)"
-          }}>1 – 7 June 2026</span>
+          }}>22 May – 3 June 2026</span>
           <div style={{ flex: 1, height: "1px", background: "linear-gradient(90deg, rgba(139,0,0,0.65), transparent)" }} />
         </div>
 
@@ -1226,7 +1256,7 @@ function MainPage() {
             gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
             gap: "2rem"
           }}>
-            {[1, 2, 3, 4, 5].map(n => {
+            {[1, 2, 3, 4].map(n => {
               const event = EVENTS_DATA[n];
               return (
                 <div 
@@ -1322,7 +1352,238 @@ function MainPage() {
           </div>
         </div>
 
-        {/* ── 6. THE POSTCARD DESK (SIDE-BY-SIDE 3D FLIPPING CARDS) ── */}
+        {/* ── 6. GREAT HALL EVENTS ── */}
+        <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
+          {/* Title header */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.5rem" }}>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+            <h3 style={{
+              fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
+              color: "#c0b096", textTransform: "uppercase"
+            }}>
+              Great Hall Events
+            </h3>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+          </div>
+
+          {/* Event Cards Grid */}
+          <div style={{
+            width: "100%",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
+            gap: "2rem"
+          }}>
+            {['a', 'b', 'c', 'd'].map(n => {
+              const event = EVENTS_DATA[n];
+              return (
+                <div 
+                  key={n} 
+                  onClick={() => setActiveEvent(n)}
+                  style={{
+                    background: "rgba(250,246,240,0.95)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    outline: "1px solid rgba(44,28,12,0.15)",
+                    borderRadius: "6px",
+                    boxShadow: "0 15px 35px rgba(0,0,0,0.55)",
+                    overflow: "hidden",
+                    cursor: "pointer",
+                    transition: "transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s",
+                    transform: "rotate(0.5deg)"
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = "translateY(-8px) scale(1.02) rotate(-0.5deg)";
+                    e.currentTarget.style.boxShadow = "0 22px 45px rgba(0,0,0,0.65)";
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = "rotate(0.5deg)";
+                    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.55)";
+                  }}
+                >
+                  <div style={{
+                    height: "240px",
+                    background: "rgba(255,255,255,0.25)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                    borderBottom: "1px solid rgba(44,28,12,0.1)"
+                  }}>
+                    <img
+                      src={event.photo}
+                      alt={event.title}
+                      style={{ 
+                        width: "100%", 
+                        height: "100%", 
+                        display: "block", 
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                  <div style={{
+                    padding: "1.2rem 1.4rem 1.4rem",
+                    textAlign: "left"
+                  }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
+                      <span style={{
+                        fontFamily: "'Josefin Sans', sans-serif",
+                        fontSize: "0.72rem",
+                        fontWeight: "bold",
+                        color: "#8b0000",
+                        letterSpacing: "0.08em"
+                      }}>
+                        {event.date}
+                      </span>
+                      <span style={{
+                        fontFamily: "'Special Elite', monospace",
+                        fontSize: "0.65rem",
+                        color: "rgba(44,28,12,0.55)"
+                      }}>
+                        {event.time}
+                      </span>
+                    </div>
+                    <h4 style={{
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: "1.05rem",
+                      fontWeight: "bold",
+                      color: "#2c1c0c",
+                      lineHeight: 1.3,
+                      margin: "0 0 0.6rem"
+                    }}>
+                      {event.title}
+                    </h4>
+                    <div style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontStyle: "italic",
+                      fontSize: "0.85rem",
+                      color: "rgba(44,28,12,0.72)",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.4rem"
+                    }}>
+                      <span>🏰</span> <span>{event.venue}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── 7. YOUR YULE TICKET ── */}
+        <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.5rem" }}>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+            <h3 style={{
+              fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
+              color: "#c0b096", textTransform: "uppercase"
+            }}>
+              Sample Yule Ticket
+            </h3>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img 
+              src="/ticket.png" 
+              alt="Yule Ticket" 
+              style={{ 
+                maxWidth: "100%", 
+                height: "auto", 
+                borderRadius: "8px", 
+                boxShadow: "0 15px 40px rgba(0,0,0,0.6), 0 0 10px rgba(218,165,32,0.2)",
+                transition: "transform 0.4s ease, box-shadow 0.4s ease",
+                cursor: "pointer",
+                transform: "rotate(-1deg)"
+              }} 
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = "translateY(-5px) scale(1.02) rotate(0deg)";
+                e.currentTarget.style.boxShadow = "0 25px 50px rgba(0,0,0,0.7), 0 0 20px rgba(218,165,32,0.4)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = "rotate(-1deg)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.6), 0 0 10px rgba(218,165,32,0.2)";
+              }}
+            />
+          </div>
+        </div>
+
+        {/* ── 8. CULTURAL PERFORMANCES - ARTIST LINEUP ── */}
+        <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.5rem" }}>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+            <h3 style={{
+              fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
+              color: "#c0b096", textTransform: "uppercase", textAlign: "center"
+            }}>
+              Cultural Performances<br />
+              <span style={{ fontSize: "0.75rem", color: "rgba(218,165,32,0.7)", letterSpacing: "0.15em", fontFamily: "'Josefin Sans', sans-serif" }}>
+                Artist Lineup
+              </span>
+            </h3>
+            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+          </div>
+          <div style={{
+            width: "100%",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "2rem"
+          }}>
+            {[
+              { n: 1, date: "29 May 2026" },
+              { n: 2, date: "30 May 2026" },
+              { n: 3, date: "31 May 2026" },
+              { n: 4, date: "01 June 2026" },
+              { n: 5, date: "02 June 2026" },
+              { n: 6, date: "03 June 2026" }
+            ].map(({ n, date }) => (
+              <div key={`artist-${n}`} style={{
+                background: "rgba(250,246,240,0.95)",
+                border: "1px solid rgba(255,255,255,0.15)",
+                borderRadius: "6px",
+                overflow: "hidden",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+                transition: "transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s",
+                cursor: "pointer",
+                display: "flex",
+                flexDirection: "column"
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = "translateY(-8px) scale(1.02)";
+                e.currentTarget.style.boxShadow = "0 18px 40px rgba(0,0,0,0.6)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = "none";
+                e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.5)";
+              }}
+              >
+                <div style={{ 
+                  overflow: "hidden",
+                  borderBottom: "1px solid rgba(44,28,12,0.1)"
+                }}>
+                  <img 
+                    src={`/artist${n}.png`} 
+                    alt={`Artist ${n}`} 
+                    style={{ 
+                      width: "100%", 
+                      height: "auto", 
+                      display: "block" 
+                    }} 
+                  />
+                </div>
+                <div style={{ 
+                  padding: "1rem", 
+                  fontFamily: "'Cinzel', serif", 
+                  color: "#2c1c0c", 
+                  fontWeight: "bold",
+                  fontSize: "1rem"
+                }}>
+                  {date}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── 9. THE POSTCARD DESK (SIDE-BY-SIDE 3D FLIPPING CARDS) ── */}
         <div id="postcard-desk-section" style={{ width: "100%", padding: "1rem 0 2.5rem" }}>
           
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.8rem" }}>
@@ -1402,8 +1663,9 @@ function MainPage() {
           </a>
           
         </div>
-        <div style={{ fontSize: "0.7rem", fontFamily: "'Josefin Sans', sans-serif", letterSpacing: "0.15em", color: "rgba(220,160,140,0.6)" }}>
-          © 2026 Secret Wizarding Unit
+        <div style={{ fontSize: "0.7rem", fontFamily: "'Josefin Sans', sans-serif", letterSpacing: "0.15em", color: "rgba(220,160,140,0.6)", textAlign: "center", lineHeight: "1.6" }}>
+          © 2026 Secret Wizarding Unit<br/>
+          Developed by Halder Kaushiki, Founder, Secret Wizarding Unit
         </div>
       </footer>
     </div>
