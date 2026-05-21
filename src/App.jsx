@@ -638,7 +638,7 @@ function RegistrationModal({ pathType, onClose, onRegister }) {
 const EVENTS_DATA = {
   1: {
     title: ".pptx of Secrets",
-    date: "30 May 2026",
+    date: "25 May 2026",
     time: "02: 00 PM Onwards",
     venue: "Secret Wizarding Unit",
     desc: "",
@@ -646,7 +646,7 @@ const EVENTS_DATA = {
   },
   2: {
     title: "Music & Love",
-    date: "31 May 2026",
+    date: "26 May 2026",
     time: "02:00 PM Onwards",
     venue: "Secret Wizarding Unit",
     desc: "",
@@ -662,7 +662,7 @@ const EVENTS_DATA = {
   },
   4: {
     title: "let's fix a Date",
-    date: "03 June 2026",
+    date: "02 June 2026",
     time: "08:00 PM",
     venue: "Secret Wizarding Unit",
     desc: "",
@@ -678,7 +678,7 @@ const EVENTS_DATA = {
   },
   'a': {
     title: "guess the duo",
-    date: "29 May 2026",
+    date: "25 May 2026",
     time: "07:00 PM Onwards",
     venue: "The Great Hall",
     desc: "",
@@ -686,7 +686,7 @@ const EVENTS_DATA = {
   },
   'b': {
     title: "scribble.io Night",
-    date: "29 May 2026",
+    date: "26 May 2026",
     time: "08:00 PM",
     venue: "The Great Hall",
     desc: "",
@@ -694,7 +694,7 @@ const EVENTS_DATA = {
   },
   'c': {
     title: "2 truth & a lie",
-    date: "01 June 2026",
+    date: "02 June 2026",
     time: "11:30 PM",
     venue: "The Great Hall",
     desc: "",
@@ -702,7 +702,7 @@ const EVENTS_DATA = {
   },
   'd': {
     title: "The Dare Night",
-    date: "02 June 2026",
+    date: "01 June 2026",
     time: "10:00 AM",
     venue: "The Great Hall",
     desc: "",
