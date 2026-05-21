@@ -1583,30 +1583,32 @@ function MainPage() {
           </div>
         </div>
 
-        {/* ── 8.5. EVENT CHRONOLOGY ── */}
-        <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "3rem" }}>
-            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+        {/* ── 8.5. EVENT CHRONOLOGY (PREMIUM DESIGN) ── */}
+        <div style={{ width: "100%", padding: "4rem 0 6rem", position: "relative" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.5rem", marginBottom: "4rem" }}>
+            <div style={{ width: "40px", height: "1px", background: "linear-gradient(to right, transparent, rgba(218,165,32,0.6))" }} />
             <h3 style={{
-              fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
-              color: "#c0b096", textTransform: "uppercase", textAlign: "center"
+              fontFamily: "'Cinzel', serif", fontSize: "1.3rem", letterSpacing: "0.28em",
+              color: "#c0b096", textTransform: "uppercase", textAlign: "center",
+              textShadow: "0 2px 10px rgba(0,0,0,0.5)"
             }}>
               Event Chronology
             </h3>
-            <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
+            <div style={{ width: "40px", height: "1px", background: "linear-gradient(to left, transparent, rgba(218,165,32,0.6))" }} />
           </div>
           
           <div style={{ 
             position: "relative",
-            maxWidth: "800px", margin: "0 auto",
-            display: "flex", flexDirection: "column", gap: "2.5rem"
+            maxWidth: "900px", margin: "0 auto",
+            display: "flex", flexDirection: "column", gap: "3rem"
           }}>
-            {/* Center Line */}
+            {/* Center Glowing Line */}
             <div style={{
               position: "absolute",
-              top: 0, bottom: 0, left: "50%",
-              width: "1px",
-              borderLeft: "1px dashed rgba(218,165,32,0.5)",
+              top: "-2rem", bottom: "-2rem", left: "50%",
+              width: "2px",
+              background: "linear-gradient(to bottom, transparent, rgba(218,165,32,0.5) 10%, rgba(218,165,32,0.5) 90%, transparent)",
+              boxShadow: "0 0 15px rgba(218,165,32,0.3)",
               transform: "translateX(-50%)",
               zIndex: 1
             }} />
@@ -1636,33 +1638,85 @@ function MainPage() {
                   flexDirection: isLeft ? "row" : "row-reverse",
                   width: "100%",
                   position: "relative",
-                  zIndex: 2
+                  zIndex: 2,
+                  alignItems: "center"
                 }}>
                   {/* Content Box */}
                   <div style={{
                     width: "50%",
-                    padding: isLeft ? "0 clamp(1rem, 4vw, 2.5rem) 0 0" : "0 0 0 clamp(1rem, 4vw, 2.5rem)",
-                    textAlign: isLeft ? "right" : "left",
+                    padding: isLeft ? "0 clamp(1.5rem, 5vw, 3.5rem) 0 0" : "0 0 0 clamp(1.5rem, 5vw, 3.5rem)",
+                    display: "flex",
+                    justifyContent: isLeft ? "flex-end" : "flex-start",
                     position: "relative",
                     boxSizing: "border-box"
                   }}>
-                    {/* The Dot */}
+                    {/* The Dot (Magical Diamond) */}
                     <div style={{
                       position: "absolute",
-                      top: "0.2rem",
+                      top: "50%",
                       [isLeft ? "right" : "left"]: "-8px",
-                      width: "12px", height: "12px", borderRadius: "50%", background: "#8b0000",
-                      border: "2px solid #faf6f0",
-                      boxShadow: "0 0 10px rgba(139,0,0,0.8)",
+                      width: "16px", height: "16px", 
+                      background: "linear-gradient(135deg, #d4af37, #ffdf73, #d4af37)",
+                      transform: "translateY(-50%) rotate(45deg)",
+                      boxShadow: "0 0 15px rgba(218,165,32,0.8), inset 0 0 4px rgba(0,0,0,0.5)",
+                      border: "1px solid rgba(255,255,255,0.5)",
                       zIndex: 3
                     }} />
                     
-                    {/* Text */}
-                    <div style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: "clamp(0.65rem, 1.8vw, 0.75rem)", color: "rgba(220,160,140,0.9)", letterSpacing: "0.1em" }}>
-                      {ev.date} <span style={{ opacity: 0.5, margin: "0 0.3rem" }}>|</span> {ev.time}
-                    </div>
-                    <div style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)", color: "#faf6f0", fontWeight: "bold", marginTop: "0.4rem", letterSpacing: "0.05em", lineHeight: 1.2 }}>
-                      {ev.title}
+                    {/* Connecting Horizontal Line */}
+                    <div style={{
+                      position: "absolute",
+                      top: "50%",
+                      [isLeft ? "right" : "left"]: "0",
+                      width: "clamp(1.5rem, 5vw, 3.5rem)",
+                      height: "1px",
+                      background: "linear-gradient(to " + (isLeft ? "left" : "right") + ", rgba(218,165,32,0.6), transparent)",
+                      transform: "translateY(-50%)",
+                      zIndex: 1
+                    }} />
+                    
+                    {/* The Card */}
+                    <div 
+                      style={{
+                        background: "rgba(20, 5, 10, 0.4)",
+                        backdropFilter: "blur(8px)",
+                        WebkitBackdropFilter: "blur(8px)",
+                        border: "1px solid rgba(218,165,32,0.15)",
+                        borderTop: "1px solid rgba(218,165,32,0.3)",
+                        borderBottom: "1px solid rgba(0,0,0,0.5)",
+                        borderRadius: "8px",
+                        padding: "1.2rem 1.4rem",
+                        textAlign: isLeft ? "right" : "left",
+                        width: "100%",
+                        maxWidth: "320px",
+                        boxShadow: "0 8px 25px rgba(0,0,0,0.6), inset 0 1px 5px rgba(255,255,255,0.05)",
+                        transition: "all 0.4s cubic-bezier(0.25, 1, 0.5, 1)",
+                        cursor: "pointer",
+                        position: "relative",
+                        zIndex: 2
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.transform = "translateY(-5px) scale(1.02)";
+                        e.currentTarget.style.background = "rgba(35, 10, 15, 0.6)";
+                        e.currentTarget.style.boxShadow = "0 12px 35px rgba(0,0,0,0.8), 0 0 20px rgba(218,165,32,0.15), inset 0 1px 5px rgba(255,255,255,0.1)";
+                        e.currentTarget.style.borderColor = "rgba(218,165,32,0.4)";
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.transform = "none";
+                        e.currentTarget.style.background = "rgba(20, 5, 10, 0.4)";
+                        e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.6), inset 0 1px 5px rgba(255,255,255,0.05)";
+                        e.currentTarget.style.borderColor = "rgba(218,165,32,0.15)";
+                      }}
+                    >
+                      <div style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: "0.68rem", color: "rgba(220,160,140,0.8)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+                        {ev.date}
+                      </div>
+                      <div style={{ fontFamily: "'Cinzel', serif", fontSize: "1.1rem", color: "#faf6f0", fontWeight: "bold", letterSpacing: "0.05em", lineHeight: 1.3, marginBottom: "0.6rem" }}>
+                        {ev.title}
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: isLeft ? "flex-end" : "flex-start", gap: "0.4rem", fontFamily: "'Special Elite', monospace", fontSize: "0.75rem", color: "rgba(218,165,32,0.7)" }}>
+                        <span>🕰</span> <span>{ev.time}</span>
+                      </div>
                     </div>
                   </div>
                   
