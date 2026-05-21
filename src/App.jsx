@@ -672,7 +672,7 @@ const EVENTS_DATA = {
     title: "let's fix a Date",
     date: "02 June 2026",
     time: "04:00 PM",
-    venue: "The Great Hall",
+    venue: "The Yule Ball Courtyard",
     desc: "",
     photo: "/event5.png"
   },
@@ -680,7 +680,7 @@ const EVENTS_DATA = {
     title: "guess the duo",
     date: "25 May 2026",
     time: "07:00 PM Onwards",
-    venue: "The Great Hall",
+    venue: "The Yule Ball Courtyard",
     desc: "",
     photo: "/eventa.png"
   },
@@ -688,7 +688,7 @@ const EVENTS_DATA = {
     title: "scribble.io Night",
     date: "26 May 2026",
     time: "08:00 PM",
-    venue: "The Great Hall",
+    venue: "The Yule Ball Courtyard",
     desc: "",
     photo: "/eventb.png"
   },
@@ -696,7 +696,7 @@ const EVENTS_DATA = {
     title: "2 truth & a lie",
     date: "02 June 2026",
     time: "11:30 PM",
-    venue: "The Great Hall",
+    venue: "The Yule Ball Courtyard",
     desc: "",
     photo: "/eventc.png"
   },
@@ -704,7 +704,7 @@ const EVENTS_DATA = {
     title: "The Dare Night",
     date: "01 June 2026",
     time: "10:00 AM",
-    venue: "The Great Hall",
+    venue: "The Yule Ball Courtyard",
     desc: "",
     photo: "/eventd.png"
   }
@@ -1352,16 +1352,16 @@ function MainPage() {
           </div>
         </div>
 
-        {/* ── 6. GREAT HALL EVENTS ── */}
+        {/* ── 6. THE YULE BALL COURTYARD EVENTS ── */}
         <div style={{ width: "100%", padding: "2rem 0 4rem" }}>
           {/* Title header */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.5rem" }}>
             <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
             <h3 style={{
               fontFamily: "'Cinzel', serif", fontSize: "1.1rem", letterSpacing: "0.28em",
-              color: "#c0b096", textTransform: "uppercase"
+              color: "#c0b096", textTransform: "uppercase", textAlign: "center"
             }}>
-              Great Hall Events
+              The Yule Ball Courtyard Events
             </h3>
             <div style={{ width: "20px", height: "1px", background: "rgba(218,165,32,0.4)" }} />
           </div>
