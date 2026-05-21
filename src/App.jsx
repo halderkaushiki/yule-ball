@@ -1606,18 +1606,11 @@ function MainPage() {
             width: "100%"
           }}>
             
-            {/* Postcard 1: Partner */}
+            {/* Postcard: Normal Registration */}
             <PathwayPostcard
-              type="FORM 1"
-              title="Register with your partner"
-              formUrl="https://forms.gle/sbv74rXzdTFrpUYK9"
-            />
-
-            {/* Postcard 2: Blind Date */}
-            <PathwayPostcard
-              type="FORM 2"
-              title="Register for blind date"
-              formUrl="https://docs.google.com/forms/d/e/1FAIpQLSfzFGC9SasLWKHeL1xPycGB0wItSZ4cjB_VqBFQB6Iup1F3RQ/viewform"
+              type="REGISTRATION"
+              title="Normal Registration"
+              formUrl="https://www.facebook.com/share/p/1JP7XxBhkp/"
             />
             
             </div>
