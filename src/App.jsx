@@ -1614,7 +1614,7 @@ function MainPage() {
             }} />
 
             {[
-              { date: "21 May - 28 May 2026", title: "Registration Period", time: "All Day" },
+              { date: "21 May - 24 May 2026", title: "Registration Period", time: "All Day" },
               { date: "29 May 2026", title: "Cultural Performance (Artist 1)", time: "TBD" },
               { date: "29 May 2026", title: "guess the duo", time: "07:00 PM Onwards" },
               { date: "29 May 2026", title: "scribble.io Night", time: "08:00 PM" },
