@@ -115,8 +115,8 @@ function Particles({ count = 80 }) {
         isTick,
         x: Math.random() * w,
         y: Math.random() * h,
-        r: isTick ? Math.random() * 12 + 6 : Math.random() * 2.2 + 1.2,
-        w: isTick ? Math.random() * 2 + 1 : 0, // width for sprinkles
+        r: isTick ? Math.random() * 2.5 + 2 : Math.random() * 2.2 + 1.2,
+        w: isTick ? Math.random() * 5 + 2.5 : 0, // width for sprinkles
         vx: (Math.random() - 0.5) * 0.45,       // gentle drift
         vy: Math.random() * 0.75 + 0.35,        // slow falling
         a: Math.random() * 0.55 + 0.35,         // opacity
